@@ -14,7 +14,7 @@ const postSchema =new mongoose.Schema({
    
     readingTime:{
         type:Number,
-        required:[true,"Please enter Product cooking Time"],
+        default:5,
         maxLength:[5,"Please cannot exceed 3 characters"]
     },
     isActive:{
@@ -33,7 +33,7 @@ const postSchema =new mongoose.Schema({
             url:{
                 type:String,
                 // required:true
-                default:""
+                default:"https://picsum.photos/200"
             }
         }
     ,
@@ -50,7 +50,7 @@ const postSchema =new mongoose.Schema({
             user:{
                 type:mongoose.Schema.ObjectId,
                 ref:"User",
-                required:true
+            
             }
         }
     ],

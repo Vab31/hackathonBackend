@@ -1,4 +1,4 @@
-const shopSchema = require("../models/shopModel");
+
 
 class ApiFeatures{
     constructor(query,queryStr){
@@ -37,9 +37,9 @@ class ApiFeatures{
 
     filter(){
      
-        const categoryKeyword=this.queryStr.category?{
-            categories:{
-                $in:this.queryStr.category,
+        const categoryKeyword=this.queryStr.tag?{
+            tags:{
+                $in:this.queryStr.tag,
                 // $options:"i",
             }
         }:{};
