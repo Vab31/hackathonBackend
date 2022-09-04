@@ -48,3 +48,21 @@ exports.getMyProfile=catchAsyncErrors(async(req,res,next)=>{
         admin
     })
 });
+
+
+
+// logout user
+exports.logout=catchAsyncErrors(async(req,res,next)=>{
+    res.cookie("token",null,{
+        expires:new Date(Date.now()),
+        secure:true,
+        sameSite:'none',
+        httpOnly:true,
+    });
+
+    res.status(200).json({
+        success:true,  
+        
+        message:"Logged Out"
+    })
+})
