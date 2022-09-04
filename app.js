@@ -36,9 +36,15 @@ app.use(fileUpload());
 
 // routes import
 const testRoute=require("./routes/testRoute");
+const user = require("./routes/userRoute");
+const post = require("./routes/postRoute");
 
 
 app.use("/api/v1",testRoute);
+app.use("/api/v1",user);
+app.use("/api/v1",post);
+
+
 
 
 app.use(errorMiddleware);

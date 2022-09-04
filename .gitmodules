@@ -1,0 +1,3 @@
+[submodule "CypherBlog"]
+	path = CypherBlog
+	url = https://github.com/ankitnayak09/CypherBlog.git
